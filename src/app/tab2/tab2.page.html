@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Calculador
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+    <div color="dark">
+      <p>Primeiro diga quanto será investido, depois quanto custa o seu produto e por ultimo quantos produtos pretente vender.</p>
+    </div>
+
+    <ion-item class="values" color="dark">
+      <ion-label position="floating">Pretende Gastar</ion-label>
+      <ion-input [(ngModel)]="soma1" type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label position="floating">Preço por Produto</ion-label>
+      <ion-input [(ngModel)]="soma2" type="number" ></ion-input>
+    </ion-item>
+
+    <ion-item color="dark">
+      <ion-label position="floating"> Quantidade de Produto</ion-label>
+      <ion-input [(ngModel)]="soma3" type="number" ></ion-input>
+    </ion-item>
+
+      <ion-button (click)="click()" expand="block" fill="outline" color="secondary">Iniciar Calculo</ion-button>
+
+    <ion-item class="values" color="dark">
+        <ion-label *ngIf="visibilidate == true" position="floating">Ganho Total</ion-label>
+        <p>{{ total }}</p>
+    </ion-item>
+
+    <ion-item  color="dark">
+        <ion-label *ngIf="visibilidate == true" position="floating">Seu Lucro</ion-label>
+        <p>{{ lucro }}</p>
+    </ion-item>
+
+<!--    <script type="text/javascript">-->
+
+<!--function click() {-->
+<!--  var soma1Var = document.getElementsByClassName(soma1).value;-->
+<!--  var soma2Var = document.getElementsByClassName(soma2).value;-->
+<!--  var soma3Var = document.getElementsByClassName(soma3).value;-->
+<!--  var totalVar = soma3Var * soma2Var;-->
+<!--  var lucroVar = totalVar - soma1Var;-->
+
+<!--  document.getElementsByClassName('total').value = totalVar;-->
+<!--  document.getElementsByClassName('lucro').value = lucroVar;-->
+
+<!--}-->
+
+<!--    </script>-->
+
+</ion-content>
